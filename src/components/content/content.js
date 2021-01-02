@@ -4,15 +4,20 @@ import './content.css'
 
 const Content = (props) =>{
    
-    const all = props.filtered.map((item,i)=>{
-        
-
-        if(typeof props.filtered[i].scan != "undefined"){
+    const loc = props.filtered.map((item,i)=>{
+                if(typeof props.filtered[i].scan != "undefined"){
            return props.filtered[i].scan.map((items,idx)=>{
                 return <li>{props.filtered[i].scan[idx].location}</li>
             })
         }
     })
+    const loctime = props.filtered.map((item,i)=>{
+        if(typeof props.filtered[i].scan != "undefined"){
+   return props.filtered[i].scan.map((items,idx)=>{
+        return <li>{props.filtered[i].scan[idx].time}</li>
+    })
+}
+})
     
   
     const awb = props.filtered.map((item,i)=>{
@@ -44,7 +49,8 @@ const Content = (props) =>{
                 <ul>
                     <li key={props.Data._id}>
                     
-                        {all}
+                        {loc}
+                        <span>{loctime}</span>
                  
                     </li>
                 </ul>
@@ -60,6 +66,7 @@ const Content = (props) =>{
                 <th scope="col">AWBNO</th>
                 <th scope="col">TRANSPORTER</th>
                 <th scope="col">SOURCE</th>
+                <th scope="col">DESTINATION</th>
                 <th scope="col">Start</th>
                 <th scope="col">ETD</th>
                 <th scope="col">Status</th>
@@ -70,7 +77,9 @@ const Content = (props) =>{
                 <td>{awb}</td>
                 <td>{Transporter}</td>
                 <td>{Source}</td>
+                <td>{Destination}</td>
                 <td>{start}</td>
+                
                 <tr>{etd}</tr>
                 <td className="forstatus">{status}</td>
                 </tr>
