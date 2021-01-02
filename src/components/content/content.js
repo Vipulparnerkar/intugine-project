@@ -49,8 +49,7 @@ const Content = (props) =>{
                 <ul>
                     <li key={props.Data._id}>
                     
-                        {loc}
-                        <span>{loctime}</span>
+                       {loc}
                  
                     </li>
                 </ul>

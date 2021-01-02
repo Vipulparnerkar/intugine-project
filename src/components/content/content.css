@@ -1,3 +1,15 @@
+
+::-webkit-scrollbar {
+   height:20px; 
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #0275d8;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
 .outer-box{
     margin: 10px;
    border-style: solid ;
@@ -18,7 +30,10 @@
     border-style: solid;
     border-color: rgba(107, 117, 126, 0.583);
     margin: 20px;
-    flex-basis: 50%;
+    flex-basis: 52%;
+    overflow: scroll;
+    scrollbar-color: red;
+    height: 100vh;;
     
 }
 .forstatus{
