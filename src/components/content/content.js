@@ -21,7 +21,7 @@ const Content = (props) =>{
     
   
     const awb = props.filtered.map((item,i)=>{
-        return <p key={i}>{props.filtered[i].awbno}</p>})
+        return <p value={props.filtered[i].awbno} key={i}>#{props.filtered[i].awbno}</p>})
     const Transporter = props.filtered.map((item,i)=>{
         return <p key={i}>{props.filtered[i].carrier}</p>})
     const Source = props.filtered.map((item,i)=>{
@@ -38,6 +38,13 @@ const Content = (props) =>{
                    
      const status = props.filtered.map((item,i)=>{
         return <p>{ props.filtered[i].current_status}</p>})
+       function click  (event){
+           event.preventDefault();
+           var y  = document.getElementById("test").innerText;
+           console.log(y)
+            console.log( event.target.value)
+            
+        }
 
 	return (
         <div className="con">
@@ -59,7 +66,7 @@ const Content = (props) =>{
 
         </div>
         <div className="fl">
-        <table className="table table-striped table-hover">
+        <table className="table ">
             <thead>
                 <tr>
                 <th scope="col">AWBNO</th>
@@ -72,14 +79,21 @@ const Content = (props) =>{
                 </tr>
             </thead>
             <tbody>
-                <tr className="bg-red">
-                <td>{awb}</td>
+                <tr >
+                    
+                    <td onClick={click} id="test" className="try">{awb}</td>
+
+                  
+                    
+
+                    
+                
                 <td>{Transporter}</td>
                 <td>{Source}</td>
                 <td>{Destination}</td>
                 <td>{start}</td>
                 
-                <tr>{etd}</tr>
+                <td>{etd}</td>
                 <td className="forstatus">{status}</td>
                 </tr>
                            
