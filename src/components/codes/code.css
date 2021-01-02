@@ -1,0 +1,18 @@
+
+
+.sqaure{
+    color: white;
+font-size: small;
+    height: 100px;
+    width: 100px;
+    background-color: rgba(129, 182, 243, 0.89);
+    border-radius: 10px;
+    padding: 10px;
+}
+.outer{
+    display:flex;
+    margin:20px 470px ;
+    padding: 10px;
+    
+    justify-content: space-between;
+}

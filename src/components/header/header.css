@@ -1,0 +1,13 @@
+.forfont{
+    font-weight: bolder;
+    
+}
+.alignment{
+    padding: 10px;;
+}
+.logop{
+    justify-content: center;
+    padding:7px;
+    background-color: lightgrey;
+    border-radius: 100%;
+}
