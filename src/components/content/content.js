@@ -60,7 +60,7 @@ const Content = (props) =>{
 
         </div>
         <div className="fl">
-        <table className="table">
+        <table className="table table-striped table-hover">
             <thead>
                 <tr>
                 <th scope="col">AWBNO</th>
@@ -73,7 +73,7 @@ const Content = (props) =>{
                 </tr>
             </thead>
             <tbody>
-                <tr >
+                <tr className="bg-red">
                 <td>{awb}</td>
                 <td>{Transporter}</td>
                 <td>{Source}</td>
